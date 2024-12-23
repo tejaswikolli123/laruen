@@ -1,57 +1,51 @@
-import React from "react";
-import {Box,Button,TextField, Typography, Paper} from "@mui/material";
+import { Box, Button, TextField, Typography } from '@mui/material';
+import React from 'react';
 
 const AwsForm = () => {
   return (
     <Box
       sx={{
-        backgroundColor: "#f5f5f5",
-        minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        padding: "20px 0",
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: '20px 0',
       }}
     >
-      <Box sx={{ textAlign: "center", margin: "20px 0" }}>
-        <Typography variant="h2" component="span" fontWeight="bold">
-          Your{" "}
-        </Typography>
-        <Typography
-          variant="h2"
-          component="span"
-          fontWeight="bold"
-          sx={{ color: "darkred" }}
-        >
+      <Typography
+        variant="h2"
+        sx={{ fontWeight: 700, fontSize: '68px', textAlign: 'center' }}
+      >
+        Your{' '}
+        <span style={{ color: '#971517', fontWeight: 700, fontSize: '68px' }}>
           AWS Transformation
-        </Typography>
-        <Typography variant="h2" component="span" fontWeight="bold">
-          {" "}Starts Here!
-        </Typography>
-      </Box>
+        </span>{' '}
+        Starts Here!
+      </Typography>
 
-    
-      <Box>
-        <Paper
-          elevation={4}
+      <Box
+        sx={{
+          width: '85%',
+          display: 'flex',
+          flexDirection: 'row',
+          padding: '30px',
+          gap: '10px',
+        }}
+      >
+        
+        <Box
           sx={{
-            display: "flex",
-            flexDirection: "row",
-            borderRadius: 2,
-            overflow: "hidden",
-            maxWidth: "px",
+            width: '60%',
+            backgroundColor: '#f3f3f3',
+            display: 'flex',
+            alignItems: 'center',
+            padding: '40px',
+            borderRadius: '50px 0 0 50px',
+            border: '1px solid black',
           }}
         >
-          {/* Left Section: Form */}
-          <Box
-            sx={{
-              backgroundColor: "#fff",
-              padding: 4,
-              flex: 1,
-            }}
-          >
-            <Box component="form" noValidate>
+         <Box component="form" noValidate>
             <label htmlFor="name">Name</label>
               <TextField
                 fullWidth
@@ -93,33 +87,23 @@ const AwsForm = () => {
             </Box>
           </Box>
 
-          {/* Right Section: Red Background with Text */}
-          <Box
-          sx={{
-            width: '40%',
-            display: 'flex',
-            flexDirection: 'column-reverse',
-            padding: '40px',
-            borderRadius: '0 50px 50px 0',
-            border: '1px solid black',
-            backgroundImage:
-              'url(https://png.pngtree.com/thumb_back/fh260/background/20220307/pngtree-abstract-slice-maroon-image_1066936.jpg)',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            color: 'white',
-            position: "relative",
-          }}
-        >
-          <Typography variant="h6" sx={{ fontWeight: 700 }}>
-            Kickstart your <br />
-            AWS journey <br />
-            with us
-          </Typography>
-        </Box>
-        </Paper>
+
+        
+        <Box sx={{width:'40%',
+        display:'flex',flexDirection:'column-reverse',
+        padding:'40px',
+        borderRadius:'0px 50px 50px 0px',
+        border:'1px solid black',
+         backgroundImage:
+            'url(https://png.pngtree.com/thumb_back/fh260/background/20220307/pngtree-abstract-slice-maroon-image_1066936.jpg)',
+        backgroundRepeat:'no-repeat',
+        backgroundSize:'cover' }}>
+                <Typography variant='h6' sx={{fontWeight:700,color:'white'}}> 
+                  Kickstart your <br/> AWS journey<br/>with us
+                  </Typography>
+            </Box>
       </Box>
     </Box>
-    
   );
 };
 
